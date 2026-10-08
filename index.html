@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#05132a">
 <meta name="description" content="Public roadmap, GitHub activity, and news for NEXT System Control PS4 homebrew.">
 <title>NEXT System Control — Development Portal</title>
-<link rel="icon" href="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/icon0.png">
+<link rel="icon" href="assets/icon0.png">
 <style>
 :root{color-scheme:dark;--bg:#030b19;--panel:#0a1b33;--line:#244a78;--blue:#34b7ff;--soft:#b0cbe8;--text:#edf7ff;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(ellipse at top,#112d5c 0%,var(--bg) 55%) fixed}a{color:#70d0ff}a:hover{color:#e2f8ff}a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}p{color:var(--soft);line-height:1.65}
@@ -15,7 +15,7 @@
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 0;flex-wrap:wrap}nav .links{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.9rem}nav strong{letter-spacing:.16em;font-size:.82rem}nav strong span{color:var(--blue)}
 .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);gap:35px;align-items:center;padding:55px 0 35px}.overline{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:#69c9ff;font-weight:700}
 h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.07;letter-spacing:-.035em;margin:14px 0}h2{font-size:clamp(1.55rem,3vw,2.1rem);margin:0 0 7px}h3{font-size:1.05rem;margin:12px 0}section{padding:30px 0;scroll-margin-top:20px}.lede{max-width:700px}
-.hero-art{width:100%;max-width:380px;display:block;justify-self:center;border:1px solid #245b9d;border-radius:18px;box-shadow:0 0 45px #0078ff33}
+.hero-art{width:100%;max-width:290px;aspect-ratio:1;object-fit:contain;display:block;justify-self:center;border:1px solid #245b9d;border-radius:18px;box-shadow:0 0 45px #0078ff33}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{display:inline-flex;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;border:1px solid #3382cc}.primary{background:linear-gradient(125deg,#0873d6,#27b3f2);color:#fff}.secondary{background:#0b2140;color:#e9f6ff}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(150deg,#0e2445,#08182f);border:1px solid #245081;border-radius:13px;padding:22px;min-width:0}.card p{margin-bottom:0}.tag{font-size:.72rem;letter-spacing:.05em;border:1px solid #246ca6;color:#89dcff;padding:5px 9px;border-radius:99px;display:inline-block}.note{color:#9cbedf;font-size:.88rem}.rule{border:0;border-top:1px solid var(--line);margin:20px 0}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:18px 0}.stat{border:1px solid #265484;background:#0b2141;border-radius:12px;padding:18px}.stat b{display:block;font-size:1.8rem;color:#8bdbff}.stat span{font-size:.82rem;color:var(--soft)}
@@ -26,11 +26,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 </style>
 </head>
 <body>
-<img class="banner" src="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/next_banner.png" alt="NEXT System Control blue banner">
+<img class="banner" src="assets/next_banner.png" alt="NEXT System Control blue banner">
 <div class="wrap">
 <nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#focus">Development</a><a href="#activity">Live activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
 <main>
-<section class="hero"><div><div class="overline">Open source · Community driven · PS4 homebrew</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public development hub for NEXT System Control. Follow what is changing, what's being tested, and what's planned—directly from our public GitHub activity.</p><div class="actions"><a class="button primary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control">Source repository ↗</a></div></div><img class="hero-art" src="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/pic1.png" alt="NEXT System Control PS4-branded project splash artwork"></section>
+<section class="hero"><div><div class="overline">Open source · Community driven · PS4 homebrew</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public development hub for NEXT System Control. Follow what is changing, what's being tested, and what's planned—directly from our public GitHub activity.</p><div class="actions"><a class="button primary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control">Source repository ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
 <section id="focus"><div class="overline">Development overview</div><h2>Currently in focus</h2><p class="note">Priorities are editorial; they are not completion percentages or proof that a feature is stable.</p><div class="grid">
 <article class="card"><span class="tag">Phase 1 priority</span><h3>SSH & remote access</h3><p>Authentication, command handling, stability testing, and useful diagnostics.</p></article>
 <article class="card"><span class="tag">Phase 1 priority</span><h3>FTP & file management</h3><p>Service isolation, intentional access controls, and safer filesystem workflows.</p></article>
