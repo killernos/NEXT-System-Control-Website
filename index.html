@@ -1,28 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="NEXT System Control public development portal">
-<title>NEXT System Control | Development</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05132a">
+<meta name="description" content="Public roadmap, GitHub activity, and news for NEXT System Control PS4 homebrew.">
+<title>NEXT System Control — Development Portal</title>
+<link rel="icon" href="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/icon0.png">
 <style>
-:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#081015;color:#e9f4f1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:#77eab3}a:hover{color:#c6ffde}header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #29413c}nav{display:flex;gap:18px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:.09em}.brand span{color:#6df0ac}.hero{padding:64px 0 35px}.eyebrow{color:#6df0ac;letter-spacing:.12em;font-size:.8rem}h1{font-size:clamp(2rem,5vw,3.5rem);margin:12px 0}p{line-height:1.65;color:#b6c9c5}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px}.card{background:#101e23;border:1px solid #28463e;border-radius:14px;padding:22px}.tag{display:inline-block;border-radius:99px;background:#203a32;color:#8ef3bb;padding:5px 10px;font-size:.8rem}.muted{color:#9ab2ad}h2{margin-top:42px}footer{margin-top:35px;border-top:1px solid #29413c;color:#9ab2ad}a:focus-visible{outline:3px solid #fff;outline-offset:3px}.button{display:inline-block;padding:12px 18px;border:1px solid #6df0ac;border-radius:8px;text-decoration:none;font-weight:700}@media(max-width:600px){header{align-items:flex-start;flex-direction:column}.hero{padding:35px 0}}
-</style></head>
+:root{color-scheme:dark;--bg:#030b19;--panel:#0a1b33;--line:#244a78;--blue:#34b7ff;--soft:#b0cbe8;--text:#edf7ff;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(ellipse at top,#112d5c 0%,var(--bg) 55%) fixed}a{color:#70d0ff}a:hover{color:#e2f8ff}a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}p{color:var(--soft);line-height:1.65}
+.banner{display:block;width:100%;max-height:158px;object-fit:cover;border-bottom:1px solid var(--line)}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 0;flex-wrap:wrap}nav .links{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.9rem}nav strong{letter-spacing:.16em;font-size:.82rem}nav strong span{color:var(--blue)}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);gap:35px;align-items:center;padding:55px 0 35px}.overline{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:#69c9ff;font-weight:700}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.07;letter-spacing:-.035em;margin:14px 0}h2{font-size:clamp(1.55rem,3vw,2.1rem);margin:0 0 7px}h3{font-size:1.05rem;margin:12px 0}section{padding:30px 0;scroll-margin-top:20px}.lede{max-width:700px}
+.hero-art{width:100%;max-width:380px;display:block;justify-self:center;border:1px solid #245b9d;border-radius:18px;box-shadow:0 0 45px #0078ff33}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{display:inline-flex;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;border:1px solid #3382cc}.primary{background:linear-gradient(125deg,#0873d6,#27b3f2);color:#fff}.secondary{background:#0b2140;color:#e9f6ff}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(150deg,#0e2445,#08182f);border:1px solid #245081;border-radius:13px;padding:22px;min-width:0}.card p{margin-bottom:0}.tag{font-size:.72rem;letter-spacing:.05em;border:1px solid #246ca6;color:#89dcff;padding:5px 9px;border-radius:99px;display:inline-block}.note{color:#9cbedf;font-size:.88rem}.rule{border:0;border-top:1px solid var(--line);margin:20px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:18px 0}.stat{border:1px solid #265484;background:#0b2141;border-radius:12px;padding:18px}.stat b{display:block;font-size:1.8rem;color:#8bdbff}.stat span{font-size:.82rem;color:var(--soft)}
+.feed-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feed{list-style:none;padding:0;margin:12px 0 0}.feed li{border-top:1px solid #1b3b65;padding:13px 0}.feed li:first-child{border-top:0}.feed a{font-weight:650;text-decoration:none;overflow-wrap:anywhere}.feed small{display:block;color:#93b7d7;margin-top:5px}.status{color:#93b7d7;font-size:.9rem}.status.error{color:#ffb6b6}
+footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-size:.9rem;margin-top:28px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{max-width:450px}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid,.feed-grid{grid-template-columns:1fr}.banner{min-height:70px}nav .links{gap:12px}.hero{padding-top:30px}}
+</style>
+</head>
 <body>
-<header><div class="brand"><span>NEXT</span> SYSTEM CONTROL</div><nav aria-label="Site navigation"><a href="#status">Status</a><a href="#roadmap">Roadmap</a><a href="#contribute">Follow development</a></nav></header>
+<img class="banner" src="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/next_banner.png" alt="NEXT System Control blue banner">
+<div class="wrap">
+<nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#focus">Development</a><a href="#activity">Live activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
 <main>
-<section class="hero"><div class="eyebrow">PS4 HOMEBREW · PUBLIC DEVELOPMENT PORTAL</div><h1>Built for the community.<br>Developed in the open.</h1><p>Follow development priorities, planned features and published project activity. This website is informational and does not modify your console.</p><a class="button" href="https://github.com/killernos/NEXT-System-Control">Explore source code →</a></section>
-<section id="status"><h2>Development areas</h2><p class="muted">These are areas of work, not verified live completion indicators. See GitHub for the latest activity.</p><div class="grid">
-<article class="card"><span class="tag">Phase 1 focus</span><h3>SSH & remote access</h3><p>Authentication, remote commands, diagnostics and crash-resistant handling.</p></article>
-<article class="card"><span class="tag">Phase 1 focus</span><h3>FTP & file management</h3><p>Separate service controls, read/write permission safeguards and validation.</p></article>
-<article class="card"><span class="tag">Phase 1 focus</span><h3>Diagnostics & reporting</h3><p>Logs, durable breadcrumbs, error information and reproducible test evidence.</p></article></div></section>
-<section id="roadmap"><h2>Public roadmap</h2><div class="grid">
-<article class="card"><h3>Phase 1 · Reliability</h3><p>Stable launch and shutdown, SSH/FTP separation, controller navigation and meaningful logs.</p></article>
-<article class="card"><h3>Phase 2 · User experience</h3><p>Guided and expert modes, an update workflow, terminal utilities and database groundwork.</p></article>
-<article class="card"><h3>Future · Research</h3><p>Read-only system research, firmware comparisons, persistence feasibility and recovery safeguards.</p></article></div></section>
-<section id="contribute"><h2>See what is being done</h2><p>Browse actual commits, pull requests, issues and releases. These links show repository activity; planned work is not a promise of availability.</p><div class="grid">
-<article class="card"><h3>Code changes</h3><a href="https://github.com/killernos/NEXT-System-Control/commits">Latest commits</a></article>
-<article class="card"><h3>In review</h3><a href="https://github.com/killernos/NEXT-System-Control/pulls">Open pull requests</a></article>
-<article class="card"><h3>Issues</h3><a href="https://github.com/killernos/NEXT-System-Control/issues">Bugs & feature requests</a></article>
-<article class="card"><h3>Releases</h3><a href="https://github.com/killernos/NEXT-System-Control/releases">Published releases</a></article></div></section>
-</main><footer>Created and maintained by KillerNoS · NEXT System Control is an independent community project.</footer>
+<section class="hero"><div><div class="overline">Open source · Community driven · PS4 homebrew</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public development hub for NEXT System Control. Follow what is changing, what's being tested, and what's planned—directly from our public GitHub activity.</p><div class="actions"><a class="button primary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control">Source repository ↗</a></div></div><img class="hero-art" src="https://raw.githubusercontent.com/killernos/NEXT-System-Control/main/assets/ps4/pic1.png" alt="NEXT System Control PS4-branded project splash artwork"></section>
+<section id="focus"><div class="overline">Development overview</div><h2>Currently in focus</h2><p class="note">Priorities are editorial; they are not completion percentages or proof that a feature is stable.</p><div class="grid">
+<article class="card"><span class="tag">Phase 1 priority</span><h3>SSH & remote access</h3><p>Authentication, command handling, stability testing, and useful diagnostics.</p></article>
+<article class="card"><span class="tag">Phase 1 priority</span><h3>FTP & file management</h3><p>Service isolation, intentional access controls, and safer filesystem workflows.</p></article>
+<article class="card"><span class="tag">Phase 1 priority</span><h3>Diagnostics & reporting</h3><p>Crash breadcrumbs, log viewers, reports, and reproducible test evidence.</p></article>
+</div></section>
+<section id="activity"><div class="overline">From the public repository</div><h2>GitHub development activity</h2><p class="note">These counts and lists are fetched from GitHub when the page loads. They may be delayed or unavailable due to GitHub API limits; they do not measure functional completion.</p>
+<div class="stats"><div class="stat"><b id="count-commits">—</b><span>Recent commits shown</span></div><div class="stat"><b id="count-prs">—</b><span>Open pull requests shown</span></div><div class="stat"><b id="count-issues">—</b><span>Open issues shown</span></div><div class="stat"><b id="count-releases">—</b><span>Releases shown</span></div></div>
+<p id="api-status" role="status" class="status">Loading activity from GitHub…</p>
+<div class="feed-grid">
+<article class="card"><h3>Recent commits</h3><ul class="feed" id="feed-commits"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/commits">All commits →</a></article>
+<article class="card"><h3>Pull requests in review</h3><ul class="feed" id="feed-prs"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/pulls">All pull requests →</a></article>
+<article class="card"><h3>Open issues</h3><ul class="feed" id="feed-issues"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/issues">All issues →</a></article>
+<article class="card"><h3>Published releases</h3><ul class="feed" id="feed-releases"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/releases">All releases →</a></article>
+</div></section>
+<section id="roadmap"><div class="overline">Where NEXT is headed</div><h2>Public roadmap</h2><div class="grid">
+<article class="card"><span class="tag">First</span><h3>Phase 1 · Reliability</h3><p>Launch/exit stability, SSH and FTP separation, predictable navigation, and actionable logs.</p></article>
+<article class="card"><span class="tag">Planned</span><h3>Phase 2 · Usability</h3><p>Guided versus expert modes, safe update delivery, terminal utilities, and database groundwork.</p></article>
+<article class="card"><span class="tag">Research horizon</span><h3>Future · Security research</h3><p>Read-only firmware research, boot-state observation, persistence feasibility, and recovery safeguards.</p></article>
+</div><p class="note">Roadmap items are subject to change. Experimental features should not be treated as release-ready.</p></section>
+<section id="links"><div class="overline">Get involved</div><h2>Follow the project</h2><p>Want to help? Browse the code, read public issues, and share reproducible bug reports. Use only releases and tools appropriate for your firmware.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/issues">Issues & feedback ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/pulls">Contributions ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/releases">Releases ↗</a></div></section>
+</main><footer>Created and maintained by KillerNoS · NEXT System Control is an independent community project. This site is informational and does not modify consoles.</footer>
+</div>
+<script>
+(() => {
+"use strict";
+const base = "https://api.github.com/repos/killernos/NEXT-System-Control";
+const feeds = [
+{key:"commits",url:base+"/commits?per_page=5",parse:r=>({title:r.commit?.message?.split("\n")[0]||"Commit",url:r.html_url,date:r.commit?.author?.date,by:r.author?.login||r.commit?.author?.name||"Contributor"})},
+{key:"prs",url:base+"/pulls?state=open&per_page=5",parse:r=>({title:"#"+r.number+" · "+r.title,url:r.html_url,date:r.updated_at,by:r.user?.login||"Contributor"})},
+{key:"issues",url:base+"/issues?state=open&per_page=10",filter:r=>!r.pull_request,parse:r=>({title:"#"+r.number+" · "+r.title,url:r.html_url,date:r.updated_at,by:r.user?.login||"Contributor"})},
+{key:"releases",url:base+"/releases?per_page=5",parse:r=>({title:r.name||r.tag_name||"Release",url:r.html_url,date:r.published_at,by:r.author?.login||"Maintainer"})}
+];
+function shortDate(d){if(!d)return "Date unavailable";const date=new Date(d);return Number.isNaN(date.getTime())?"Date unavailable":date.toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"});}
+function safeUrl(v){try{const u=new URL(v);return u.protocol==="https:"&&u.hostname==="github.com"&&u.pathname.startsWith("/killernos/NEXT-System-Control/")?u.href:null;}catch{return null;}}
+function render(key,items,message){const list=document.getElementById("feed-"+key);list.replaceChildren();document.getElementById("count-"+key).textContent=String(items.length);if(!items.length){const li=document.createElement("li");li.textContent=message||"No items in this recent sample.";list.append(li);return;}
+for(const item of items){const li=document.createElement("li");const a=document.createElement("a");a.textContent=item.title;const href=safeUrl(item.url);if(href){a.href=href;a.target="_blank";a.rel="noopener noreferrer";}const small=document.createElement("small");small.textContent=item.by+" · "+shortDate(item.date);li.append(a,small);list.append(li);}}
+async function load(feed){try{const response=await fetch(feed.url,{headers:{Accept:"application/vnd.github+json"}});if(!response.ok)throw new Error("HTTP "+response.status);const rows=await response.json();if(!Array.isArray(rows))throw new Error("Unexpected response");const items=(feed.filter?rows.filter(feed.filter):rows).slice(0,5).map(feed.parse);render(feed.key,items,"No recent public items.");return true;}catch{document.getElementById("count-"+feed.key).textContent="—";const list=document.getElementById("feed-"+feed.key);list.replaceChildren();const li=document.createElement("li");li.textContent="Live data unavailable. Use the GitHub link below.";list.append(li);return false;}}
+Promise.all(feeds.map(load)).then(results=>{const status=document.getElementById("api-status");const ok=results.filter(Boolean).length;status.textContent=ok===4?"GitHub activity loaded. Counts show up to five recent entries per section.":ok?"Some GitHub data is temporarily unavailable. Repository links remain available.":"GitHub API unavailable (possibly rate-limited). Use the repository links below.";status.classList.toggle("error",ok===0);});
+})();
+</script>
 </body></html>
