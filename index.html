@@ -28,7 +28,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <body>
 <img class="banner" src="assets/next_banner.png" alt="NEXT System Control blue banner">
 <div class="wrap">
-<nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#focus">Development</a><a href="#activity">Live activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
+<nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#focus">Development</a><a href="#activity">GitHub activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
 <main>
 <section class="hero"><div><div class="overline">Open source · Community driven · PS4 homebrew</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public development hub for NEXT System Control. Follow what is changing, what's being tested, and what's planned—directly from our public GitHub activity.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/releases/tag/v0.5.0-beta.1">Download v0.5.0 Beta 1 ↗</a><a class="button secondary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control">Source repository ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
 <section id="release"><div class="overline">Public beta now available</div><h2>NEXT System Control v0.5.0 Beta 1</h2><p class="lede">Revision 21 has been tested on a PS4 running firmware 12.00 with GoldHEN. Includes SSH diagnostics (port 2222), FTP access (port 2122), and read-only on-console filesystem navigation. This is a beta release; other firmware versions are not yet verified.</p><p class="note">Security: FTP does not support TLS. Use only on trusted local networks, never expose SSH or FTP ports to the internet, and review the release notes for known limitations.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/releases/tag/v0.5.0-beta.1">Download beta package ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/releases">Release history ↗</a></div></section>
@@ -37,14 +37,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <article class="card"><span class="tag">Phase 1 priority</span><h3>FTP & file management</h3><p>Service isolation, intentional access controls, and safer filesystem workflows.</p></article>
 <article class="card"><span class="tag">Phase 1 priority</span><h3>Diagnostics & reporting</h3><p>Crash breadcrumbs, log viewers, reports, and reproducible test evidence.</p></article>
 </div></section>
-<section id="activity"><div class="overline">From the public repository</div><h2>GitHub development activity</h2><p class="note">These counts and lists are fetched from GitHub when the page loads. They may be delayed or unavailable due to GitHub API limits; they do not measure functional completion.</p>
-<div class="stats"><div class="stat"><b id="count-commits">—</b><span>Recent commits shown</span></div><div class="stat"><b id="count-prs">—</b><span>Open pull requests shown</span></div><div class="stat"><b id="count-issues">—</b><span>Open issues shown</span></div><div class="stat"><b id="count-releases">—</b><span>Releases shown</span></div></div>
-<p id="api-status" role="status" class="status">Loading activity from GitHub…</p>
-<div class="feed-grid">
-<article class="card"><h3>Recent commits</h3><ul class="feed" id="feed-commits"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/commits">All commits →</a></article>
-<article class="card"><h3>Pull requests in review</h3><ul class="feed" id="feed-prs"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/pulls">All pull requests →</a></article>
-<article class="card"><h3>Open issues</h3><ul class="feed" id="feed-issues"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/issues">All issues →</a></article>
-<article class="card"><h3>Published releases</h3><ul class="feed" id="feed-releases"><li>Loading…</li></ul><a href="https://github.com/killernos/NEXT-System-Control/releases">All releases →</a></article>
+<section id="activity"><div class="overline">From the public repository</div><h2>GitHub development activity</h2><p class="note">Open each section on GitHub for current information. These direct links work without GitHub API access, so visitors will not see empty counters or failed live feeds.</p>
+<div class="grid">
+<article class="card"><span class="tag">Source activity</span><h3>Recent commits</h3><p>Browse the latest code changes and development history.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/commits">View commits ↗</a></div></article>
+<article class="card"><span class="tag">Code review</span><h3>Pull requests</h3><p>See proposed changes, reviews, and merges.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/pulls">View pull requests ↗</a></div></article>
+<article class="card"><span class="tag">Community</span><h3>Open issues</h3><p>Read bug reports, requests, and discussion.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/issues">View issues ↗</a></div></article>
+<article class="card"><span class="tag">Available now · Public beta</span><h3>NEXT System Control v0.5.0 Beta 1</h3><p>Revision 21 PS4 test build, including SSH diagnostics, FTP, and read-only filesystem navigation. Tested on firmware 12.00 with GoldHEN.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/releases/tag/v0.5.0-beta.1">Download beta ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/releases">All releases ↗</a></div></article>
 </div></section>
 <section id="roadmap"><div class="overline">Where NEXT is headed</div><h2>Public roadmap</h2><div class="grid">
 <article class="card"><span class="tag">First</span><h3>Phase 1 · Reliability</h3><p>Launch/exit stability, SSH and FTP separation, predictable navigation, and actionable logs.</p></article>
@@ -54,22 +52,5 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <section id="links"><div class="overline">Get involved</div><h2>Follow the project</h2><p>Want to help? Browse the code, read public issues, and share reproducible bug reports. Use only releases and tools appropriate for your firmware.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/issues">Issues & feedback ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/pulls">Contributions ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/releases">Releases ↗</a></div></section>
 </main><footer>Created and maintained by KillerNoS · NEXT System Control is an independent community project. This site is informational and does not modify consoles.</footer>
 </div>
-<script>
-(() => {
-"use strict";
-const base = "https://api.github.com/repos/killernos/NEXT-System-Control";
-const feeds = [
-{key:"commits",url:base+"/commits?per_page=5",parse:r=>({title:r.commit?.message?.split("\n")[0]||"Commit",url:r.html_url,date:r.commit?.author?.date,by:r.author?.login||r.commit?.author?.name||"Contributor"})},
-{key:"prs",url:base+"/pulls?state=open&per_page=5",parse:r=>({title:"#"+r.number+" · "+r.title,url:r.html_url,date:r.updated_at,by:r.user?.login||"Contributor"})},
-{key:"issues",url:base+"/issues?state=open&per_page=10",filter:r=>!r.pull_request,parse:r=>({title:"#"+r.number+" · "+r.title,url:r.html_url,date:r.updated_at,by:r.user?.login||"Contributor"})},
-{key:"releases",url:base+"/releases?per_page=5",parse:r=>({title:r.name||r.tag_name||"Release",url:r.html_url,date:r.published_at,by:r.author?.login||"Maintainer"})}
-];
-function shortDate(d){if(!d)return "Date unavailable";const date=new Date(d);return Number.isNaN(date.getTime())?"Date unavailable":date.toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"});}
-function safeUrl(v){try{const u=new URL(v);return u.protocol==="https:"&&u.hostname==="github.com"&&u.pathname.startsWith("/killernos/NEXT-System-Control/")?u.href:null;}catch{return null;}}
-function render(key,items,message){const list=document.getElementById("feed-"+key);list.replaceChildren();document.getElementById("count-"+key).textContent=String(items.length);if(!items.length){const li=document.createElement("li");li.textContent=message||"No items in this recent sample.";list.append(li);return;}
-for(const item of items){const li=document.createElement("li");const a=document.createElement("a");a.textContent=item.title;const href=safeUrl(item.url);if(href){a.href=href;a.target="_blank";a.rel="noopener noreferrer";}const small=document.createElement("small");small.textContent=item.by+" · "+shortDate(item.date);li.append(a,small);list.append(li);}}
-async function load(feed){try{const response=await fetch(feed.url,{headers:{Accept:"application/vnd.github+json"}});if(!response.ok)throw new Error("HTTP "+response.status);const rows=await response.json();if(!Array.isArray(rows))throw new Error("Unexpected response");const items=(feed.filter?rows.filter(feed.filter):rows).slice(0,5).map(feed.parse);render(feed.key,items,"No recent public items.");return true;}catch{document.getElementById("count-"+feed.key).textContent="—";const list=document.getElementById("feed-"+feed.key);list.replaceChildren();const li=document.createElement("li");li.textContent="Live data unavailable. Use the GitHub link below.";list.append(li);return false;}}
-Promise.all(feeds.map(load)).then(results=>{const status=document.getElementById("api-status");const ok=results.filter(Boolean).length;status.textContent=ok===4?"GitHub activity loaded. Counts show up to five recent entries per section.":ok?"Some GitHub data is temporarily unavailable. Repository links remain available.":"GitHub API unavailable (possibly rate-limited). Use the repository links below.";status.classList.toggle("error",ok===0);});
-})();
-</script>
+
 </body></html>
