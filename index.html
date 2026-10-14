@@ -30,8 +30,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <div class="wrap">
 <nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#focus">Development</a><a href="#activity">GitHub activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
 <main>
-<section class="hero"><div><div class="overline">Open source · Community driven · PS4 homebrew</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public development hub for NEXT System Control. Follow what is changing, what's being tested, and what's planned—directly from our public GitHub activity.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.2">Download v0.5.0 Beta 2 ↗</a><a class="button secondary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control">Source repository ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
-<section id="release"><div class="overline">Public beta now available</div><h2>NEXT System Control v0.5.0 Beta 2</h2><p class="lede">A new dashboard, six selectable themes, Explorer and Developer startup modes, and a controller-driven Tool Library. Beta 2 also improves native PS4 password entry, credential handling, SSH reconnect behavior, and dashboard alignment.</p>
+<section class="hero"><div><div class="overline">PS4 homebrew · Public releases</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public hub for NEXT System Control. Find the latest downloads, release notes, and development roadmap.</p><div class="actions"><a class="button primary" id="hero-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.2/NEXT.System.Control.v0.5.0.Beta.2.pkg">Download v0.5.0 Beta 2 PKG ↗</a><a class="button secondary" href="#activity">View development activity ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All public releases ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
+<section id="release"><div class="overline">Public release now available</div><h2 id="release-heading">NEXT System Control v0.5.0 Beta 2</h2><p class="lede" id="release-summary">A new dashboard, six selectable themes, Explorer and Developer startup modes, and a controller-driven Tool Library. Beta 2 also improves native PS4 password entry, credential handling, SSH reconnect behavior, and dashboard alignment.</p>
+<div id="release-details" data-release="v0.5.0-beta.2">
 <div class="grid">
 <article class="card"><span class="tag">Personalization</span><h3>Modern dashboard &amp; six themes</h3><p>Rounded panels, clear focus indicators, and compact status cards. Choose Matrix Green, Cyber Blue, Royal Purple, Crimson Red, Amber Gold, or Monochrome. Your dashboard and startup mode selector follow your saved theme.</p></article>
 <article class="card"><span class="tag">Navigation</span><h3>Explorer &amp; Developer modes</h3><p>Choose your mode at startup. Explorer offers read-only system information, filesystem navigation, monitoring, and diagnostics. Developer tools remain capability-gated; selecting the mode does not automatically elevate privileges or start services.</p></article>
@@ -41,27 +42,87 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <p class="note"><strong>Tested on PS4 before release.</strong> PC regression tests passed 6/6, and the OpenOrbis PS4 build and package generation completed successfully.</p>
 <p class="note"><strong>Quick controls:</strong> Square from System Info opens themes; L2 opens the Tool Library; Square toggles a favorite; Triangle searches; R2 clears search.</p>
 <p class="note"><strong>Installation:</strong> Download the PKG, install it on your jailbroken PS4 with the package installer, then launch NEXT System Control. Package title ID: <code>NEXT00034</code> (a separate application entry from earlier builds).</p>
+</div>
 <p class="note">Enable SSH or FTP only when needed on a trusted local network. FTP is not TLS-encrypted; do not expose either service to the public internet.</p>
-<div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.2/NEXT.System.Control.v0.5.0.Beta.2.pkg">Download Beta 2 PKG ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.2">Full release notes ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Release history ↗</a></div><p class="note">Previous public beta: <a href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.1">v0.5.0 Beta 1</a>.</p></section>
+<div class="actions"><a class="button primary" id="release-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.2/NEXT.System.Control.v0.5.0.Beta.2.pkg">Download Beta 2 PKG ↗</a><a class="button secondary" id="release-notes" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.2">Full release notes ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Release history ↗</a></div><p class="note">Previous public beta: <a href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.1">v0.5.0 Beta 1</a>.</p></section>
 <section id="focus"><div class="overline">Development overview</div><h2>Currently in focus</h2><p class="note">Priorities are editorial; they are not completion percentages or proof that a feature is stable.</p><div class="grid">
 <article class="card"><span class="tag">Phase 1 priority</span><h3>SSH & remote access</h3><p>Authentication, command handling, stability testing, and useful diagnostics.</p></article>
 <article class="card"><span class="tag">Phase 1 priority</span><h3>FTP & file management</h3><p>Service isolation, intentional access controls, and safer filesystem workflows.</p></article>
 <article class="card"><span class="tag">Phase 1 priority</span><h3>Diagnostics & reporting</h3><p>Crash breadcrumbs, log viewers, reports, and reproducible test evidence.</p></article>
 </div></section>
-<section id="activity"><div class="overline">From the public repository</div><h2>GitHub development activity</h2><p class="note">Open each section on GitHub for current information. These direct links work without GitHub API access, so visitors will not see empty counters or failed live feeds.</p>
+<section id="activity"><div class="overline">Project updates</div><h2>GitHub development activity</h2><p class="note">Development source and internal review activity are private. Public release downloads remain available without signing in.</p>
 <div class="grid">
-<article class="card"><span class="tag">Source activity</span><h3>Recent commits</h3><p>Browse the latest code changes and development history.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/commits">View commits ↗</a></div></article>
-<article class="card"><span class="tag">Code review</span><h3>Pull requests</h3><p>See proposed changes, reviews, and merges.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/pulls">View pull requests ↗</a></div></article>
-<article class="card"><span class="tag">Community</span><h3>Open issues</h3><p>Read bug reports, requests, and discussion.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/issues">View issues ↗</a></div></article>
-<article class="card"><span class="tag">Available now · Public beta</span><h3>NEXT System Control v0.5.0 Beta 2</h3><p>Six themes, Explorer and Developer startup modes, saved preferences, and a Tool Library with favorites, recents, and search. Includes native PS4 keyboard, credential, SSH reconnect, and alignment fixes. Tested on PS4 before release.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.2">Release notes &amp; download ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All releases ↗</a></div></article>
+<article class="card"><span class="tag">Public releases</span><h3>Release history</h3><p>Find published beta versions, package downloads, checksums, and release notes.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">View all releases ↗</a></div></article>
+<article class="card"><span class="tag">Available now · Public release</span><h3 id="activity-release-heading">NEXT System Control v0.5.0 Beta 2</h3><p id="activity-release-summary">Six themes, Explorer and Developer startup modes, saved preferences, and a Tool Library with favorites, recents, and search. Includes native PS4 keyboard, credential, SSH reconnect, and alignment fixes. Tested on PS4 before release.</p><div class="actions"><a class="button primary" id="activity-release-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.2/NEXT.System.Control.v0.5.0.Beta.2.pkg">Download Beta 2 PKG ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All releases ↗</a></div></article>
 </div></section>
 <section id="roadmap"><div class="overline">Where NEXT is headed</div><h2>Public roadmap</h2><div class="grid">
 <article class="card"><span class="tag">First</span><h3>Phase 1 · Reliability</h3><p>Launch/exit stability, SSH and FTP separation, predictable navigation, and actionable logs.</p></article>
 <article class="card"><span class="tag">Planned</span><h3>Phase 2 · Usability</h3><p>Guided versus expert modes, safe update delivery, terminal utilities, and database groundwork.</p></article>
 <article class="card"><span class="tag">Research horizon</span><h3>Future · Security research</h3><p>Read-only firmware research, boot-state observation, persistence feasibility, and recovery safeguards.</p></article>
 </div><p class="note">Roadmap items are subject to change. Experimental features should not be treated as release-ready.</p></section>
-<section id="links"><div class="overline">Get involved</div><h2>Follow the project</h2><p>Want to help? Browse the code, read public issues, and share reproducible bug reports. Use only releases and tools appropriate for your firmware.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control/issues">Issues & feedback ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control/pulls">Contributions ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Releases ↗</a></div></section>
+<section id="links"><div class="overline">Get involved</div><h2>Follow the project</h2><p>Follow published updates and choose releases appropriate for your firmware. Development source, issues, and pull requests are private.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Releases ↗</a></div></section>
 </main><footer>Created and maintained by KillerNoS · NEXT System Control is an independent community project. This site is informational and does not modify consoles.</footer>
 </div>
 
+<script>
+(function () {
+  "use strict";
+  const api = "https://api.github.com/repos/killernos/NEXT-System-Control-Releases/releases?per_page=20";
+  const releasesPage = "https://github.com/killernos/NEXT-System-Control-Releases/releases";
+  const byId = (id) => document.getElementById(id);
+  function setText(id, value) { const el = byId(id); if (el) el.textContent = value; }
+  function setLink(id, url, label) {
+    const el = byId(id);
+    if (el) { el.href = url; el.textContent = label; }
+  }
+  function display(release) {
+    const version = "v" + release.tag_name.replace(/^v/, "").replace(/-beta\.(\d+)/i, " Beta $1");
+    const asset = (release.assets || []).find((a) => /\.pkg$/i.test(a.name) && a.browser_download_url);
+    const destination = asset ? asset.browser_download_url : (release.html_url || releasesPage);
+    const label = asset ? "Download " + version + " PKG ↗" : "View " + version + " release ↗";
+    setText("release-heading", "NEXT System Control " + version);
+    setText("activity-release-heading", "NEXT System Control " + version);
+    const details = byId("release-details");
+    const matchingDetails = details.dataset.release === release.tag_name;
+    details.hidden = !matchingDetails;
+    if (!matchingDetails) {
+      const summary = (release.body || "").split(/\r?\n\s*\r?\n/)
+        .find((paragraph) => paragraph.trim() && !/^\s*#/.test(paragraph));
+      const description = summary ? summary.replace(/\r?\n/g, " ").trim()
+        : "The latest published version is " + version + ". See the full release notes for changes and installation steps.";
+      setText("release-summary", description);
+      setText("activity-release-summary", description);
+    }
+    setLink("hero-download", destination, label);
+    setLink("release-download", destination, label);
+    setLink("activity-release-download", destination, label);
+    setLink("release-notes", release.html_url || releasesPage, "Full release notes ↗");
+  }
+  fetch(api, { headers: { Accept: "application/vnd.github+json" } })
+    .then((response) => {
+      if (!response.ok) throw new Error("GitHub releases unavailable");
+      return response.json();
+    })
+    .then((items) => {
+      if (!Array.isArray(items)) throw new Error("Invalid releases response");
+      const release = items.find((item) =>
+        !item.draft && (item.assets || []).some((asset) => /\.pkg$/i.test(asset.name))
+      );
+      if (!release) throw new Error("No published PKG releases");
+      display(release);
+    })
+    .catch((error) => {
+      console.error("NEXT release lookup failed:", error);
+      byId("release-details").hidden = true;
+      setText("release-heading", "NEXT System Control releases");
+      setText("activity-release-heading", "Public releases");
+      setText("release-summary", "Unable to check the newest release automatically. Visit the public releases page for the latest verified package and release notes.");
+      setText("activity-release-summary", "View all public releases for the latest version and downloads.");
+      ["hero-download", "release-download", "activity-release-download"].forEach((id) =>
+        setLink(id, releasesPage, "View public releases ↗")
+      );
+      setLink("release-notes", releasesPage, "View release notes ↗");
+    });
+})();
+</script>
 </body></html>

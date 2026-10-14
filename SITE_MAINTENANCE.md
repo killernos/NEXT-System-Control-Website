@@ -14,7 +14,11 @@ Public information site for [NEXT System Control](https://github.com/killernos/N
 4. The expected website is https://killernos.github.io/NEXT-System-Control-Website/.
 
 ## Editorial and safety policy
-Roadmap and status labels are curated, not auto-synced. Never claim functionality is verified or released before testing. No experimental console binaries are hosted by this static website. Keep development branches isolated from the PS4 application repository.
+Roadmap and feature highlights are curated. Download links and latest-release
+headings are refreshed from the public GitHub releases API. Never claim
+functionality is verified or released before testing. Console binaries are
+distributed from the release repository, not hosted by this static website.
+Keep development branches isolated from the PS4 application repository.
 
 ## Required workflow for every release
 
@@ -35,6 +39,10 @@ and this website. Publication is not complete until both live surfaces agree.
 5. Update the release repository README and versioned notes. Update the website
    hero link, release section, highlights, testing summary, and latest-release
    card to the same version. Retain links to previous releases.
+   Update `release-details`'s `data-release` tag as well: version-specific
+   highlights, controls, testing results, and package details are hidden if
+   the API finds a different version, so old details are never attached to
+   a new download. The new release's introductory paragraph is shown instead.
 6. Merge the public website and documentation changes after approval. This does
    not authorize merging the application development branch into its `main`.
 7. Wait for GitHub Pages deployment and check the live website, public release
