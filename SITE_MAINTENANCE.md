@@ -14,11 +14,13 @@ Public information site for [NEXT System Control](https://github.com/killernos/N
 4. The expected website is https://killernos.github.io/NEXT-System-Control-Website/.
 
 ## Editorial and safety policy
-Roadmap and feature highlights are curated. Download links and latest-release
-headings are refreshed from the public GitHub releases API. Never claim
-functionality is verified or released before testing. Console binaries are
-distributed from the release repository, not hosted by this static website.
-Keep development branches isolated from the PS4 application repository.
+Roadmap and feature highlights are curated. Download links and the
+NEXT System Control latest-release heading are refreshed from the public
+GitHub releases API. NEXT Research Station's Windows executable is linked as a
+separate download and must not be presented as a PS4 package. Never claim
+functionality is verified or released before testing. Binaries are distributed
+from the release repository, not hosted by this static website. Keep development
+branches isolated from the PS4 application repository.
 
 ## Required workflow for every release
 
@@ -38,7 +40,8 @@ and this website. Publication is not complete until both live surfaces agree.
    Verify the asset filename, size, and SHA-256, and preserve previous releases.
 5. Update the release repository README and versioned notes. Update the website
    hero link, release section, highlights, testing summary, and latest-release
-   card to the same version. Retain links to previous releases.
+   card to the same NSC version. For an NRS release, add a separate Windows x64
+   download and notes link. Retain links to previous releases.
    Update `release-details`'s `data-release` tag as well: version-specific
    highlights, controls, testing results, and package details are hidden if
    the API finds a different version, so old details are never attached to
