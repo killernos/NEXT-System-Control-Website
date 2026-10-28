@@ -31,13 +31,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <div class="wrap">
 <nav aria-label="Primary navigation"><strong><span>NEXT</span> · DEVELOPMENT</strong><div class="links"><a href="#downloads">Downloads</a><a href="#focus">Development</a><a href="#activity">GitHub activity</a><a href="#roadmap">Roadmap</a><a href="#links">Community</a></div></nav>
 <main>
-<section class="hero"><div><div class="overline">PS4 homebrew · Public releases</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public hub for NEXT System Control and NEXT Research Station. Download the latest releases, review release notes, and follow the development roadmap.</p><div class="actions"><a class="button primary" id="hero-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.4/NEXT.System.Control.v0.5.0.Beta.4.pkg">Download NEXT System Control Beta 4 ↗</a><a class="button secondary" href="#downloads">All downloads ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All public releases ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
-<section id="release"><div class="overline">Paired console research · Beta 4</div><h2 id="release-heading">NEXT System Control v0.5.0 Beta 4 — Paired Research Tools</h2><p class="lede" id="release-summary">Beta 4 adds a fixed read-only Tool Registry command and bounded metadata for NRS console snapshots. Snapshot capture requires the active paired session to match the selected console and pinned host fingerprint.</p>
+<section class="hero"><div><div class="overline">PS4 homebrew · Public releases</div><h1>More control.<br>A brighter tomorrow.</h1><p class="lede">The official public hub for NEXT System Control and NEXT Research Station. Download the latest releases, review release notes, and follow the development roadmap.</p><div class="actions"><a class="button primary" href="#downloads">Choose your application ↓</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All public releases ↗</a></div></div><img class="hero-art" src="assets/icon0.png" alt="NEXT System Control application icon"></section>
+<section id="release"><div class="overline">Paired console research · Beta 4</div><h2 id="release-heading">NEXT System Control v0.5.0 Beta 4 — Paired Research Tools</h2><p class="lede" id="release-summary">Beta 4 adds a fixed read-only Tool Registry command and bounded metadata for NEXT Research Station console snapshots. Snapshot capture requires the active paired session to match the selected console and pinned host fingerprint.</p>
 <div id="release-details" data-release="v0.5.0-beta.4">
 <div class="grid">
 <article class="card"><span class="tag">Tool Registry</span><h3>Read-only catalog command</h3><p>The fixed <code>tools</code> command lists bounded registry metadata, including tool IDs, categories, mode requirements, implementation status, and declared capabilities. It does not activate or authorize tools.</p></article>
-<article class="card"><span class="tag">NRS integration</span><h3>Console snapshot metadata</h3><p>NRS can collect the fixed Tool Registry listing as part of an explicitly requested console snapshot. Snapshot records store command status and output hashes rather than raw console output.</p></article>
-<article class="card"><span class="tag">Paired identity</span><h3>Fail-closed capture</h3><p>Capture requires the active paired session to match the selected endpoint and pinned host fingerprint. NRS checks the identity before collection and before saving.</p></article>
+<article class="card"><span class="tag">NEXT Research Station integration</span><h3>Console snapshot metadata</h3><p>NEXT Research Station can collect the fixed Tool Registry listing as part of an explicitly requested console snapshot. Snapshot records store command status and output hashes rather than raw console output.</p></article>
+<article class="card"><span class="tag">Paired identity</span><h3>Fail-closed capture</h3><p>Capture requires the active paired session to match the selected endpoint and pinned host fingerprint. NEXT Research Station checks the identity before collection and before saving.</p></article>
 <article class="card"><span class="tag">Safeguards</span><h3>Capabilities remain gated</h3><p>Registry metadata is descriptive only. It does not grant authorization, elevate privileges, start services, or make arbitrary shell execution available through NEXT Shell.</p></article>
 </div>
 <p class="note"><strong>PS4 testing:</strong> the maintainer confirms this exact Beta 4 package was installed and tested on PS4.</p>
@@ -45,10 +45,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <p class="note"><strong>Installation:</strong> Install the PKG with the PS4 package installer and launch NEXT System Control. The title ID is <code>NEXT00053</code>, matching Beta 3.</p>
 </div>
 <p class="note">Enable SSH or FTP only when needed on a trusted local network. FTP is not TLS-encrypted; do not expose either service to the public internet.</p>
-<div class="actions"><a class="button primary" id="release-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.4/NEXT.System.Control.v0.5.0.Beta.4.pkg">Download Beta 4 PKG ↗</a><a class="button secondary" id="release-notes" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.4">Full release notes ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Release history ↗</a></div><p class="note">Previous public release: <a href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.3">v0.5.0 Beta 3</a>.</p></section>
+<div class="actions"><a class="button secondary" id="release-notes" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.4">NEXT System Control release notes ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">Release history ↗</a></div><p class="note">Previous public release: <a href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.3">v0.5.0 Beta 3</a>.</p></section>
 <section id="downloads"><div class="overline">Public downloads</div><h2>Choose your NEXT application</h2><div class="grid">
-<article class="card"><img class="product-icon" src="assets/icon0.png" alt="NEXT System Control application icon" width="180" height="120" loading="lazy" decoding="async"><span class="tag">PS4 · Beta 4</span><h3>NEXT System Control</h3><p>Native PS4 application with read-only Tool Registry metadata and paired-console snapshot support through NRS.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.4/NEXT.System.Control.v0.5.0.Beta.4.pkg">Download NSC Beta 4 ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.4">NSC release notes ↗</a></div></article>
-<article class="card"><img class="product-icon" src="assets/nrs-icon.png" alt="NEXT Research Station application icon" width="180" height="120" loading="lazy" decoding="async"><span class="tag">Windows x64 · Beta 1</span><h3>NEXT Research Station</h3><p>NRS is distributed as one self-contained Windows x64 executable with the .NET runtime included. It provides explicit paired-console research, read-only snapshot history, diagnostics, and offline analysis.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/nrs-v0.1.0-beta.1/NEXT.Research.Station.v0.1.0.Beta.1.WinX64.exe">Download NRS Beta 1 ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/nrs-v0.1.0-beta.1">NRS release notes ↗</a></div></article>
+<article class="card"><img class="product-icon" src="assets/icon0.png" alt="NEXT System Control application icon" width="180" height="120" loading="lazy" decoding="async"><span class="tag">PS4 · Beta 4</span><h3>NEXT System Control</h3><p>Native PS4 application with read-only Tool Registry metadata and paired-console snapshot support through NEXT Research Station.</p><div class="actions"><a class="button primary" id="download-nsc" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.4/NEXT.System.Control.v0.5.0.Beta.4.pkg">Download NEXT System Control v0.5.0 Beta 4 PKG ↗</a><a class="button secondary" id="download-nsc-notes" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.4">NEXT System Control release notes ↗</a></div></article>
+<article class="card"><img class="product-icon" src="assets/nrs-icon.png" alt="NEXT Research Station application icon" width="180" height="120" loading="lazy" decoding="async"><span class="tag">Windows x64 · Beta 1</span><h3>NEXT Research Station</h3><p>NEXT Research Station is distributed as one self-contained Windows x64 executable with the .NET runtime included. It provides explicit paired-console research, read-only snapshot history, diagnostics, and offline analysis.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/nrs-v0.1.0-beta.1/NEXT.Research.Station.v0.1.0.Beta.1.WinX64.exe">Download NEXT Research Station v0.1.0 Beta 1 ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/nrs-v0.1.0-beta.1">NEXT Research Station release notes ↗</a></div></article>
 </div></section>
 <section id="focus"><div class="overline">Development overview</div><h2>Currently in focus</h2><p class="note">Priorities are editorial; they are not completion percentages or proof that a feature is stable.</p><div class="grid">
 <article class="card"><span class="tag">Phase 1 priority</span><h3>SSH & remote access</h3><p>Authentication, command handling, stability testing, and useful diagnostics.</p></article>
@@ -58,8 +58,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
 <section id="activity"><div class="overline">Project updates</div><h2>GitHub development activity</h2><p class="note">Development source and internal review activity are private. Public release downloads remain available without signing in.</p>
 <div class="grid">
 <article class="card"><span class="tag">Public releases</span><h3>Release history</h3><p>Find published beta versions, package downloads, checksums, and release notes.</p><div class="actions"><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">View all releases ↗</a></div></article>
-<article class="card"><span class="tag">Available now · Public release</span><h3 id="activity-release-heading">NEXT System Control v0.5.0 Beta 4 — Paired Research Tools</h3><p id="activity-release-summary">Fixed read-only Tool Registry metadata and identity-bound NRS console snapshots.</p><div class="actions"><a class="button primary" id="activity-release-download" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/v0.5.0-beta.4/NEXT.System.Control.v0.5.0.Beta.4.pkg">Download Beta 4 PKG ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All releases ↗</a></div></article>
-<article class="card"><span class="tag">Windows x64 · Beta 1</span><h3>NEXT Research Station</h3><p>Portable single-file Windows build for explicit paired-console diagnostics and offline analysis.</p><div class="actions"><a class="button primary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/download/nrs-v0.1.0-beta.1/NEXT.Research.Station.v0.1.0.Beta.1.WinX64.exe">Download NRS Beta 1 ↗</a></div></article>
+<article class="card"><span class="tag">Available now · Public release</span><h3 id="activity-release-heading">NEXT System Control v0.5.0 Beta 4 — Paired Research Tools</h3><p id="activity-release-summary">Fixed read-only Tool Registry metadata and identity-bound NEXT Research Station console snapshots.</p><div class="actions"><a class="button secondary" id="activity-release-notes" href="https://github.com/killernos/NEXT-System-Control-Releases/releases/tag/v0.5.0-beta.4">NEXT System Control release notes ↗</a><a class="button secondary" href="https://github.com/killernos/NEXT-System-Control-Releases/releases">All releases ↗</a></div></article>
 </div></section>
 <section id="roadmap"><div class="overline">Where NEXT is headed</div><h2>Public roadmap</h2><div class="grid">
 <article class="card"><span class="tag">First</span><h3>Phase 1 · Reliability</h3><p>Launch/exit stability, SSH and FTP separation, predictable navigation, and actionable logs.</p></article>
@@ -85,7 +84,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
     const version = "v" + release.tag_name.replace(/^v/, "").replace(/-beta\.(\d+)/i, " Beta $1");
     const asset = (release.assets || []).find((a) => /\.pkg$/i.test(a.name) && a.browser_download_url);
     const destination = asset ? asset.browser_download_url : (release.html_url || releasesPage);
-    const label = asset ? "Download " + version + " PKG ↗" : "View " + version + " release ↗";
+    const label = asset
+      ? "Download NEXT System Control " + version + " PKG ↗"
+      : "View NEXT System Control " + version + " release ↗";
     setText("release-heading", "NEXT System Control " + version);
     setText("activity-release-heading", "NEXT System Control " + version);
     const details = byId("release-details");
@@ -99,10 +100,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
       setText("release-summary", description);
       setText("activity-release-summary", description);
     }
-    setLink("hero-download", destination, label);
-    setLink("release-download", destination, label);
-    setLink("activity-release-download", destination, label);
-    setLink("release-notes", release.html_url || releasesPage, "Full release notes ↗");
+    setLink("download-nsc", destination, label);
+    setLink("release-notes", release.html_url || releasesPage, "NEXT System Control release notes ↗");
+    setLink("download-nsc-notes", release.html_url || releasesPage, "NEXT System Control release notes ↗");
+    setLink("activity-release-notes", release.html_url || releasesPage, "NEXT System Control release notes ↗");
   }
   fetch(api, { headers: { Accept: "application/vnd.github+json" } })
     .then((response) => {
@@ -124,10 +125,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
       setText("activity-release-heading", "Public releases");
       setText("release-summary", "Unable to check the newest release automatically. Visit the public releases page for the latest verified package and release notes.");
       setText("activity-release-summary", "View all public releases for the latest version and downloads.");
-      ["hero-download", "release-download", "activity-release-download"].forEach((id) =>
-        setLink(id, releasesPage, "View public releases ↗")
+      setLink("download-nsc", releasesPage, "View NEXT System Control releases ↗");
+      ["release-notes", "download-nsc-notes", "activity-release-notes"].forEach((id) =>
+        setLink(id, releasesPage, "NEXT System Control release notes ↗")
       );
-      setLink("release-notes", releasesPage, "View release notes ↗");
     });
 })();
 </script>
