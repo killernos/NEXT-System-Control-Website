@@ -74,6 +74,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
   "use strict";
   const api = "https://api.github.com/repos/killernos/NEXT-System-Control-Releases/releases?per_page=20";
   const releasesPage = "https://github.com/killernos/NEXT-System-Control-Releases/releases";
+  const expectedTag = "v0.5.0-beta.4";
   const byId = (id) => document.getElementById(id);
   function setText(id, value) { const el = byId(id); if (el) el.textContent = value; }
   function setLink(id, url, label) {
@@ -113,19 +114,20 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8caed0;font-s
     .then((items) => {
       if (!Array.isArray(items)) throw new Error("Invalid releases response");
       const release = items.find((item) =>
-        !item.draft && (item.assets || []).some((asset) => /\.pkg$/i.test(asset.name))
+        item.tag_name === expectedTag && !item.draft &&
+        (item.assets || []).some((asset) => /\.pkg$/i.test(asset.name) && asset.browser_download_url)
       );
-      if (!release) throw new Error("No published PKG releases");
+      if (!release) throw new Error("Beta 4 PKG is not available in public releases");
       display(release);
     })
     .catch((error) => {
       console.error("NEXT release lookup failed:", error);
       byId("release-details").hidden = true;
-      setText("release-heading", "NEXT System Control releases");
-      setText("activity-release-heading", "Public releases");
-      setText("release-summary", "Unable to check the newest release automatically. Visit the public releases page for the latest verified package and release notes.");
-      setText("activity-release-summary", "View all public releases for the latest version and downloads.");
-      setLink("download-nsc", releasesPage, "View NEXT System Control releases ↗");
+      setText("release-heading", "NEXT System Control v0.5.0 Beta 4");
+      setText("activity-release-heading", "NEXT System Control Beta 4");
+      setText("release-summary", "The Beta 4 package could not be verified through GitHub releases. Check the release page before downloading.");
+      setText("activity-release-summary", "Beta 4 download verification is currently unavailable.");
+      setLink("download-nsc", releasesPage, "Check NEXT System Control Beta 4 availability ↗");
       ["release-notes", "download-nsc-notes", "activity-release-notes"].forEach((id) =>
         setLink(id, releasesPage, "NEXT System Control release notes ↗")
       );
